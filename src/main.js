@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: 'GET',
-      url: 'http://galvanize-student-apis.herokuapp.com/gpersonnel/roles',
+      url: 'https://galvanize-student-apis.herokuapp.com/gpersonnel/roles',
     }).done(function (info) {
 
       for ( var i = 0; i < Object.keys(info).length; i++) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
       var last = $('#lastName').val();
       $.ajax({
         type: 'POST',
-        url: 'http://galvanize-student-apis.herokuapp.com/gpersonnel/users',
+        url: 'https://galvanize-student-apis.herokuapp.com/gpersonnel/users',
         data: {firstName: first, lastName: last, role: chara},
         success: function(info) {
           var message = info.message;
